@@ -13,15 +13,13 @@ function App() {
     return (
         <BrowserRouter>
             <Header />
-
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/recipes" element={<Recipes />} />
-                <Route path="/categories" element={<Categories />} />
-                <Route path="/blog" element={<Blog />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/recipes" element={<Recipes />} />
+                    <Route path="/categories" element={<Categories />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
             <Footer />
         </BrowserRouter>
     );

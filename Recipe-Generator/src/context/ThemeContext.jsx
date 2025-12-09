@@ -13,13 +13,13 @@ export function ThemeProvider({ children }) {
         if (storedTheme) return storedTheme;
         return window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     };
-
+    // initialize state
     const [theme, setTheme] = useState(getInitialTheme);
 
     // Update localStorage and HTML data attribute whenever theme changes
     useEffect(() => {
         localStorage.setItem("theme", theme);
-        document.documentElement.dataset.theme = theme;
+        document.documentElement.setAttribute("data-theme",theme);
     }, [theme]);
 
     // Memoized toggle function

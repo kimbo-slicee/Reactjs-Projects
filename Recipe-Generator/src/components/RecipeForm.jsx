@@ -1,23 +1,33 @@
-import {useThemeContext} from "../context/ThemeContext.jsx";
+import { CustomButton } from "./UI/CustomButton.jsx";
 
 export default function RecipeForm() {
-    const {theme}=useThemeContext();
-    const handelSubmit = (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-    }
+        // Add your logic here
+        console.log("Recipe submitted!");
+    };
 
     return (
-        <form action={handelSubmit} className="max-w-xl mx-auto p-4 flex justify-center w-full bg:gray-200">
-          <input type="text" placeholder="ex:chese"
-                 className="flex-2 p-2 border border-gray-300 rounded"
-          />
-            <button
+        <form
+            onSubmit={handleSubmit}
+            className="max-w-xl mx-auto p-4 flex justify-center w-full md:w-2/3 sm:w-full sm:px-2 sm:py-4"
+        >
+            <input
+                type="text"
+                placeholder="ex: cheese"
+                className="flex-1 p-2 border border-gray-300 rounded-md
+                           focus:outline-none focus:ring-2 focus:ring-primary
+                           focus:border-transparent transition-colors duration-300"
+
+
+            />
+
+            <CustomButton
                 type="submit"
-                className="ml-2
-                flex-1 text-white p-2 bg-gray-800 cursor-pointer rounded"
+                className="ml-2 btn-primary hover:btn-hover px-4 py-2"
             >
                 Add Recipe
-            </button>
+            </CustomButton>
         </form>
-    )
+    );
 }
