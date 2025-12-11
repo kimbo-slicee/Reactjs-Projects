@@ -12,7 +12,7 @@ export default function Header() {
         navigateToLogin("/login");
     };
   return (
-      <header className="bg-primary shadow-md">
+      <header className="shadow-md">
         <nav
             className="flex items-center justify-between p-6 lg:px-10"
             aria-label="Global">

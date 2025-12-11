@@ -23,13 +23,16 @@ body{
     color: var(--text-color);
 }
 
-/*.bg-primary {*/
-/*    background-color: var(--primary-color);*/
-/*}*/
+.bg-primary {
+    background-color: var(--primary-color);
+}
 .bg-secondary {
     background-color: var(--background-color);
 }
 .btn-primary {
     background-color: var(--btn-primary);
+    color: var(--background-color);
+}
+.text-primary{
     color: var(--background-color);
 }
